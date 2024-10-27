@@ -30,11 +30,21 @@ async_engine = create_async_engine(
 #    print(f"{res.first()=}")
 
 
-async def get123():
-    async with async_engine.connect() as conn:
-        res = await conn.execute(text("SELECT VERSION()"))
-        print(f"{res.first()=}")
+#async def get123():
+#    async with async_engine.connect() as conn:
+#        res = await conn.execute(text("SELECT VERSION()"))
+#        print(f"{res.first()=}")
+#
+#
+#asyncio.run(get123())
 
 
-asyncio.run(get123())
+
+
+session_factory =  sessionmaker(sync_engine)
+async_session_factory = async_sessionmaker(async_engine)
+
+
+class Base(DeclarativeBase):
+    pass
 
