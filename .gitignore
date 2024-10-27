@@ -1,0 +1,5 @@
+.env
+sqlalchemyenv/*
+src/__pycache__/*
+src/queries/__pycache__/*
+

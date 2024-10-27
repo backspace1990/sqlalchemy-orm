@@ -1,0 +1,5 @@
+DB_HOST=Your Host
+DB_PORT=Your Ports for PostgresSQL
+DB_USER=Your User owner name
+DB_PASS=Your password
+DB_NAME=Your Database name 
