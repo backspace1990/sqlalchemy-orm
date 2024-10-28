@@ -38,13 +38,9 @@ async_engine = create_async_engine(
 #
 #asyncio.run(get123())
 
-
-
-
-session_factory =  sessionmaker(sync_engine)
+session_factory = sessionmaker(sync_engine)
 async_session_factory = async_sessionmaker(async_engine)
 
 
 class Base(DeclarativeBase):
     pass
-

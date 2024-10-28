@@ -1,21 +1,17 @@
 from sqlalchemy import text, insert
 from database import sync_engine, async_engine, session_factory, async_session_factory
-from models import metadata_obj, workers_table, WorkersOrm
+from models import metadata_obj, WorkersOrm
 
 
-#def create_tables():
-#    sync_engine.echo = True
-#    metadata_obj.drop_all(sync_engine)
-#    metadata_obj.create_all(sync_engine)
-#    sync_engine.echo = True
-#
+
 
 
 def create_tables():
-    sync_engine.echo = True
     metadata_obj.drop_all(sync_engine)
+    sync_engine.echo = True
     metadata_obj.create_all(sync_engine)
     sync_engine.echo = True
+
 
 
 def insert_data():
